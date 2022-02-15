@@ -1,0 +1,40 @@
+ul li {
+    list-style: none;
+    margin-bottom: 4px;
+    color: gray;
+}
+
+.fist-item {
+    color: #1CC7C1;
+    font-weight: 700;
+    font-size: 19px;
+    
+}
+
+.footer {
+    background-image: url("../../images/footer-bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.social-icons-fb, .social-icons-google, .social-icons-twiter {
+    color: #1CC7C1;
+    border: 1px solid #1CC7C1;
+    border-radius: 30px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.social-icons-fb {
+    padding: 8px 11px;
+    color: white;
+    background-color: #1CC7C1;
+}
+
+.social-icons-google {
+    padding: 8px 6px;
+}
+
+.social-icons-twiter {
+    padding: 8px 8px;
+}
