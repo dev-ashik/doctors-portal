@@ -1,7 +1,7 @@
 import React from 'react';
-import wilson from '../../images/wilson.png';
-import ema from '../../images/ema.png';
-import aliza from '../../images/aliza.png';
+import wilson from '../../../images/wilson.png';
+import ema from '../../../images/ema.png';
+import aliza from '../../../images/aliza.png';
 import TestimonialsPost from '../TestimonialsPost/TestimonialsPost';
 import './Testimonials.css';
 

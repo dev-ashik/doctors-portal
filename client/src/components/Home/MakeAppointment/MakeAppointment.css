@@ -1,14 +1,13 @@
-.contact {
-    background-image: url('../../images/appointmentBg.png');
+.make-appointment {
+    background-image: url('../../../images/appointmentBg.png');
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
-    /* height: 420px; */
+    height: 420px;
     background-position: center center;
     opacity: .9;
 }
 
-.contact::before {
+.make-appointment::before {
     content: "";
     display: block;
     width: 100%;
@@ -18,4 +17,10 @@
     opacity: .9;
     top: 0;
     z-index: -50;
+}
+
+.make-appointment img {
+    height: 530px;
+    -webkit-transform: translate(-110px);
+    transform: translateY(-110px) !important;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import treatment from '../../images/treatment.png';
+import treatment from '../../../images/treatment.png';
 
 const FeaturedService = () => {
     return (

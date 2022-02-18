@@ -1,5 +1,5 @@
 import React from 'react';
-import doctorSmall from '../../images/doctorSmall.png';
+import doctorSmall from '../../../images/doctorSmall.png';
 import DoctorsPost from '../DoctorsPost/DoctorsPost';
 
 const doctorsData = [

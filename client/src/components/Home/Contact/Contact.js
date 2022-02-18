@@ -3,7 +3,7 @@ import './Contact.css';
 
 const Contact = () => {
     return (
-        <section className='contact my-5 py-5'>
+        <section className='contact mt-5 py-5'>
             <div className='container'>
                 <div className='section-header text-center'>
                     <h5 className='text-uppercase' style={{color: '#1CC7C1'}}>contact us</h5>

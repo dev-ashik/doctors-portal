@@ -7,7 +7,7 @@ import { faFacebookF, faGooglePlusG, faTwitter } from '@fortawesome/free-brands-
 const Footer = () => {
     const year = new Date().getFullYear()
     return (
-        <section className="container footer">
+        <section className="container footer pt-5 pb-3">
             <div className="row W-75">
                 <div className="col-md-3">
                     <ul>
