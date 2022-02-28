@@ -1,0 +1,50 @@
+.pageTitle {
+    font-size: 25px !important;
+    font-weight: 500;
+    color: gray;
+}
+
+.loginform, .signUpform {
+    box-shadow: 1px 1px 10px lightgray;
+    margin: 150px 50px;
+    padding: 50px;
+    width: 400px;
+    
+}
+
+.loginInputLabel {
+    color: lightgray;
+}
+
+.loginInputField {
+    border: none;
+    border-bottom: 2px solid lightgray;
+    width: 100%;
+    padding: 2px 0;
+    margin: 2px 0;
+}
+
+.loginInputField:focus {
+    outline: none;
+    border-bottom: 2px solid gray;
+}
+
+.forgetPassword {
+    border: none;
+    background-color: transparent;
+    color: red;
+}
+
+.loginSubmitButton {
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+    
+}
+
+.textButton {
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+    color: rgb(1, 189, 189);
+}

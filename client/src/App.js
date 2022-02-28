@@ -8,6 +8,8 @@ import Home from './components/Home/Home/Home';
 import Header from './components/Home/Header/Header';
 import Footer from './components/Shared/Footer/Footer';
 import Appointment from './components/Appointment/Appointment/Appointment';
+import Login from './components/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/dashboard/appointment" element={<Dashboard />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
   );

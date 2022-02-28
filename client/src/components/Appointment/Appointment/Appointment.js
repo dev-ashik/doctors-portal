@@ -5,7 +5,7 @@ import AppointmentHeader from '../AppointmentHeader/AppointmentHeader';
 import BookAppointment from '../BookAppointment/BookAppointment';
 
 const Appointment = () => {
-    const [sesectedDate, setSelectedDate] = useState(new Date())
+    const [selectedDate, setSelectedDate] = useState(new Date())
     const handleDateChange = (date) => {
         setSelectedDate(date);
     }
@@ -13,7 +13,7 @@ const Appointment = () => {
         <div>
             <Navbar/>
             <AppointmentHeader handleDateChange={handleDateChange} />
-            <BookAppointment date={sesectedDate}/>
+            <BookAppointment date={selectedDate}/>
             <Footer/>
         </div>
     );
