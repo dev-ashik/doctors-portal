@@ -1,0 +1,7 @@
+.button {
+    color: white;
+    background-image: linear-gradient(to bottom, #18D2AF , #0FCFEA);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+}

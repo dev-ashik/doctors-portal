@@ -1,0 +1,11 @@
+.appointmentsTableSection {
+    background-color: white;
+    border-radius: 10px;
+    min-height: 500px;
+    padding: 20px;
+}
+
+.appointments {
+    color: #18D2AF;
+    font-weight: 700;
+}
