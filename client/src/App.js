@@ -10,6 +10,8 @@ import Footer from './components/Shared/Footer/Footer';
 import Appointment from './components/Appointment/Appointment/Appointment';
 import Login from './components/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import AllPatients from './components/AllPatients/AllPatients';
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/dashboard/appointment" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/allpatients" element={<AllPatients />} />
         </Routes>
       </Router>
   );

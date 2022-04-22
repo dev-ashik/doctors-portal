@@ -32,14 +32,15 @@ const Dashboard = () => {
     }, [selectedDate])
     return (
         <section>
-            <div style={containerStyle} className="container-fluid row">
+            <div style={containerStyle} className="container-fluid row p-0">
                 <div className="col-md-2">
                     <Sidebar/>
                 </div>
-                <div className="col-md-5">
+                <div className="col-md-5 mt-3">
+                    <h3 className='mb-5 fw-bold'>Appointments</h3>
                     <Calendar onChange={handleDateChange} value={new Date()} />
                 </div>
-                <div className="col-md-5">
+                <div className="col-md-5 mt-5">
                     <AppintmentsByDate appointments={appointments}/>
                 </div>
             </div>

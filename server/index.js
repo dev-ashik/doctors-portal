@@ -42,7 +42,18 @@ client.connect(err => {
         console.log("document", document);
     })
 })
+
+  app.get('/appointments', (req, res) => {
+    appointmentsCollection.find({})
+    .toArray((err, document) => {
+      res.send(document);
+      console.log(document);
+    })
+  })
+
+
 });
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
