@@ -2,8 +2,8 @@ import React from 'react';
 
 const AppointmentDataTable = ({appointments}) => {
     return (
-        <div>
-            <table>
+        <div style={{boxShadow: '1px 1px 10px lightgray'}} className='p-3'>
+            <table className='w-100'>
                 <thead>
                     <tr className='mt-5 pb-3'>
                         <th className='fw-normal pe-3 pb-4'>Sr.No</th>
