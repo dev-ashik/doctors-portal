@@ -19,7 +19,10 @@ const AllPatients = () => {
             </div>
             <div className="col-md-10 p-4 pr-5">
                 <h5 className='text-brand mb-5'>All Patient</h5>
-                <AppointmentDataTable appointments={appointments}/>
+                {
+                    appointments.length ? <AppointmentDataTable appointments={appointments}/> : <h3 className='text-center'>No Appointment here</h3>
+                }
+                
             </div>            
         </div>
     );

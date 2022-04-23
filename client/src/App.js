@@ -11,6 +11,8 @@ import Appointment from './components/Appointment/Appointment/Appointment';
 import Login from './components/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import AllPatients from './components/AllPatients/AllPatients';
+import RecentAppontments from './components/Dashboard/RecentAppontments/RecentAppointments';
+import AddDoctor from './components/AddDoctor/AddDoctor';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/dashboard/appointment" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/allpatients" element={<AllPatients />} />
+          <Route path="/recentappointments" element={<RecentAppontments />} />
+          <Route path="/adddoctior" element={<AddDoctor />} />
         </Routes>
       </Router>
   );

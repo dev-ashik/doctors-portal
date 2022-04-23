@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import doctorSmall from '../../../images/doctorSmall.png';
 import DoctorsPost from '../DoctorsPost/DoctorsPost';
 
@@ -6,12 +6,12 @@ const doctorsData = [
     {
         name: 'Dr.Caudi',
         phone: '+61 452 200 126',
-        img: doctorSmall
+        img: 'faqBannerImage.png'
     },
     {
         name: 'Dr.Caudi',
         phone: '+61 452 200 126',
-        img: doctorSmall
+        img: 'profile.png'
     },
     {
         name: 'Dr.Caudi',
@@ -20,6 +20,13 @@ const doctorsData = [
     }
 ]
 const Doctors = () => {
+    const [doctors, setDoctors] = useState([])
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/doctors')
+        .then(res => res.json())
+        .then(data => setDoctors(data))
+    },[])
     return (
         <section className='my-5 py-5'>
             <div className='container'>
@@ -28,7 +35,7 @@ const Doctors = () => {
                 </div>
                 <div className='row'>
                     {
-                        doctorsData.map(info => <DoctorsPost info={info}/>)
+                        doctors.map(doctor => <DoctorsPost doctor={doctor}/>)
                     }
                 </div>
             </div>

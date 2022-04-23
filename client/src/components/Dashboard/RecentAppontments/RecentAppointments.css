@@ -1,0 +1,46 @@
+.PendingAppointments {
+    background-color: #F1536E;
+}
+
+.TodaysAppointments {
+    background-color: #3DA5F4;
+}
+
+.TotalAppointments {
+    background-color: #00C689;
+}
+
+.TotalPatients {
+    background-color: #FDA006;
+}
+
+.prescriptionButton {
+    background-image: linear-gradient(to right, #18D2AF , #0FCFEA);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.actionButton {
+    background-color: #3DA5F4;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.recentAppointmentEditButton {
+    color: white;
+    background-color: #FDA006;
+    padding: 3px;
+    height: 33px !important;
+    width: 35px !important;
+    margin-left: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.RecentAppontmentsTable {
+    box-shadow: 1px 1px 10px lightgray;
+}

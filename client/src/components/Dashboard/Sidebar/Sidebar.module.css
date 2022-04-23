@@ -1,6 +1,7 @@
 .sidebar {
     background-image: linear-gradient(to bottom, #18D2AF , #0FCFEA);
-    min-height: 700px;
+    /* min-height: 700px; */
+    height: 100%;
 }
 
 div.logout {
