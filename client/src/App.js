@@ -13,21 +13,30 @@ import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import AllPatients from './components/AllPatients/AllPatients';
 import RecentAppontments from './components/Dashboard/RecentAppontments/RecentAppointments';
 import AddDoctor from './components/AddDoctor/AddDoctor';
+import { createContext, useState } from 'react';
+import Privateroute from './components/PrivateRoute/Privateroute';
 
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+  console.log(loggedInUser);
   return (
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]} >
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/appointment" element={<Appointment />} />
-          <Route path="/dashboard/appointment" element={<Dashboard />} />
+          {/* <Privateroute path="/patient/appointment">
+            <Route element={<Dashboard />} />
+          </Privateroute> */}
           <Route path="/login" element={<Login />} />
           <Route path="/allpatients" element={<AllPatients />} />
           <Route path="/recentappointments" element={<RecentAppontments />} />
-          <Route path="/adddoctior" element={<AddDoctor />} />
+          <Route path="/adddoctor" element={<AddDoctor />} />
         </Routes>
       </Router>
+    </UserContext.Provider>
   );
 }
 

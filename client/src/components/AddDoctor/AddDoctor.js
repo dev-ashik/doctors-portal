@@ -14,6 +14,7 @@ const AddDoctor = () => {
     const handleFileChange = (e) => {
         const newFile = e.target.files[0];
         setFile(newFile);
+        console.log(newFile);
     }
 
     const handleSubmit = () => {

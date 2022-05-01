@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import login from '../../images/login.png';
 import './login.css';
@@ -6,14 +6,22 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from './Firebase.config';
 import '../../App.css'
+import { UserContext } from '../../App';
+// import { useHistory, useLocation } from "react-router-dom";
 
 
 const app = initializeApp(firebaseConfig);
 
 const Login = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    // let history = useHistory();
+    // let location = useLocation();
+
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [user, setUser] = useState({
-        email: ''
+        email: '',
+        isLogedIn: false
     })
     const [errorMesage, setErrorMessage] = useState("");
     const [haveAccount, setHaveAccount] = useState(true)
@@ -27,7 +35,11 @@ const Login = () => {
                 ...user
             }
             newUser.email = user.email;
-            setUser(newUser)
+            newUser.isLogedIn = true;
+            
+            setUser(newUser);
+            setLoggedInUser(newUser);
+            // history.replace(from)
         })
         .catch((error) => {
             const errorMessage = error.message;
@@ -46,7 +58,10 @@ const Login = () => {
                 ...user
             }
             newUser.email = user.email;
-            setUser(newUser)
+            newUser.isLogedIn = true;
+
+            setUser(newUser);
+            setLoggedInUser(newUser);
         })
         .catch((error) => {
             const errorMessage = error.message;
@@ -60,7 +75,14 @@ const Login = () => {
         const auth = getAuth();
         signOut(auth).then(() => {
             // Sign-out successful.
-            setUser({email: ''})
+            const newUser = {
+                ...user
+            }
+            newUser.email = '';
+            newUser.isLogedIn = false;
+            setUser(newUser)
+            setLoggedInUser(newUser);
+
         }).catch((error) => {
         // An error happened.
         });
